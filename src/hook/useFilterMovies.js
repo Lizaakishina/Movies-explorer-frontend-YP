@@ -1,4 +1,4 @@
-import { MOVIE_SHORT_DURATION } from '../../utils/constants';
+import { MOVIE_SHORT_DURATION } from '../utils/constants';
 
 const useFilterMovies = () => {
     const handleSearch = (movies, movieName) => {
