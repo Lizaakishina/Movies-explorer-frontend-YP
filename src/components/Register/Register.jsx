@@ -5,6 +5,7 @@ import "./Register.css";
 import { useValidation } from "../../hook/useValidation";
 import { LoginContext } from "../../context/LoginContext";
 import { useCallback, useContext, useEffect } from "react";
+import { EMAIL_PATTERN } from "../../utils/constants";
 
 const Register = ({history, onSubmit, errorMessageApi, isLoader, isButtonInactive}) => {
   const { values, handleChange, errors, isValid, resetForm } = useValidation();
@@ -51,6 +52,7 @@ const Register = ({history, onSubmit, errorMessageApi, isLoader, isButtonInactiv
             input = "email"
             inputType = "email"
             placeholder = "E-mail"
+            pattern={EMAIL_PATTERN}
             name="email"
             minLength="4"
             maxLength="40"

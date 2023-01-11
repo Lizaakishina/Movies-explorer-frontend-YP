@@ -13,7 +13,7 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import { useEffect, useState } from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom';
 //контексты и утилиты
-import { NOT_MOVIES_SEARCH_MESSAGE, MOVIES_SERVER_ERROR_MESSAGE, JWT, MOVIES_NAME, CHECKBOX } from '../../utils/constants';
+import { NOT_MOVIES_SEARCH_MESSAGE, MOVIES_SERVER_ERROR_MESSAGE, JWT, MOVIES_NAME, CHECKBOX, REGISTER_ERROR_MESSAGE, USER_UPDATE_MESSAGE, USER_UPDATE_ERROR_MESSAGE } from '../../utils/constants';
 import { CurrentUserContext } from '../../context/CurrentUserContext';
 import { LoginContext } from '../../context/LoginContext';
 import { createMovies, deleteMovie, getSavedMovies, getUser, login, register, updateUser } from '../../utils/mainApi';
@@ -76,7 +76,7 @@ const App = ({history}) => {
       handleLogin({email, password});
     } catch (error) {
       if (error.statusCode === 400) {
-        setErrorMessageApi('При регистрации пользователя произошла ошибка.')
+        setErrorMessageApi(REGISTER_ERROR_MESSAGE)
       } else if (error.statusCode === 409) {
         setErrorMessageApi(error.message)
       } else {
@@ -138,9 +138,9 @@ const App = ({history}) => {
       setIsLoader(true);
       const user = await updateUser({name, email});
       setCurrentUser({_id: user._id, name: user.name, email: user.email});
-      handleOpenPopup("Данные успешно обновлены", false)
+      handleOpenPopup(USER_UPDATE_MESSAGE, false)
     } catch (error) {
-      error.statusCode === 409 ? setErrorMessageApi(error.message) : setErrorMessageApi("При обновлении профиля произошла ошибка.");
+      error.statusCode === 409 ? setErrorMessageApi(error.message) : setErrorMessageApi(USER_UPDATE_ERROR_MESSAGE);
     } finally {
       setIsLoader(false);
       setTimeout(() => {
