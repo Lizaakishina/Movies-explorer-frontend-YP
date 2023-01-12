@@ -168,6 +168,7 @@ const App = ({history}) => {
   }
 
   const handleSearchMovies = async (movieName, checked) => {
+    setMovieErrorMessage('')
     setIsShort(checked);
     setIsLoader(true);
     handleGetMovies();
