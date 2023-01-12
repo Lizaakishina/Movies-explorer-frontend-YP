@@ -85,9 +85,9 @@ const App = ({history}) => {
       setIsButtonInactive(false);
     } finally {
       setIsLoader(false);
-      setTimeout(() => {
-        setErrorMessageApi('');
-      }, 3000)
+      //setTimeout(() => {
+      //  setErrorMessageApi('');
+      //}, 3000)
     }
   }
 
@@ -109,9 +109,9 @@ const App = ({history}) => {
       console.log(error);
     } finally {
       setIsLoader(false);
-      setTimeout(() => {
-        setErrorMessageApi('');
-      }, 3000)
+      //setTimeout(() => {
+      //  setErrorMessageApi('');
+      //}, 3000)
     }
   }
 
@@ -143,9 +143,9 @@ const App = ({history}) => {
       error.statusCode === 409 ? setErrorMessageApi(error.message) : setErrorMessageApi(USER_UPDATE_ERROR_MESSAGE);
     } finally {
       setIsLoader(false);
-      setTimeout(() => {
-        setErrorMessageApi('');
-      }, 3000)
+      //setTimeout(() => {
+      //  setErrorMessageApi('');
+      //}, 3000)
     }
   }
 
