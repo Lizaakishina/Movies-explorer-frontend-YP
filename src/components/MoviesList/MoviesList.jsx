@@ -6,7 +6,7 @@ import { useLocation } from "react-router";
 import { LARGE_WINDOW_SIZE, MIDDLE_WiNDOW_SIZE, MORE_BUTTON_LARGE, MORE_BUTTON_MIDDLE, LARGE_COUNT, MIDDLE_COUNT, SMALL_COUNT } from '../../utils/constants';
 
 
-const MoviesList = ({filterMovies, isLoader, movieErrorMessage, onCreateMovie, savedMovies, onDeleteMovie }) => {
+const MoviesList = ({filterMovies, isLoader, onCreateMovie, savedMovies, onDeleteMovie }) => {
   const [moviesDisplay, setMoviesDisplay] = useState([]);
   const [count, setCount] = useState(0);
   const [windowSize, setWindowsSite] = useState(window.screen.width)
@@ -73,7 +73,6 @@ const MoviesList = ({filterMovies, isLoader, movieErrorMessage, onCreateMovie, s
 
   return (
     <section className="moviesList">
-      {/*movieErrorMessage && <h2 className="moviesList__title">{movieErrorMessage}</h2>*/}
       {movieElement.length === 0 ? (
           <h2 className="moviesList__title">Ничего не найдено.</h2>
       ) : (
