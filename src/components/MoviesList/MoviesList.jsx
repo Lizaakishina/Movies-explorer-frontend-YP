@@ -74,7 +74,7 @@ const MoviesList = ({filterMovies, isLoader, movieErrorMessage, onCreateMovie, s
   return (
     <section className="moviesList">
       {/*movieErrorMessage && <h2 className="moviesList__title">{movieErrorMessage}</h2>*/}
-      {!movieElement.length === 0 ? (
+      {movieElement.length === 0 ? (
           <h2 className="moviesList__title">Ничего не найдено.</h2>
       ) : (
         ""
