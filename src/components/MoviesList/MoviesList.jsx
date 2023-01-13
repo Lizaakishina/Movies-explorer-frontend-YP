@@ -73,7 +73,12 @@ const MoviesList = ({filterMovies, isLoader, movieErrorMessage, onCreateMovie, s
 
   return (
     <section className="moviesList">
-      {movieErrorMessage && <h2 className="moviesList__title">{movieErrorMessage}</h2>}
+      {/*movieErrorMessage && <h2 className="moviesList__title">{movieErrorMessage}</h2>*/}
+      {!movieElement ? (
+          <h2 className="moviesList__title">Ничего не найдено.</h2>
+      ) : (
+        ""
+      )}
       <ul className="list moviesList__grid">
         {movieElement}
       </ul>
