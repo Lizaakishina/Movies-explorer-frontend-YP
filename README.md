@@ -1,15 +1,13 @@
-# movies-explorer-frontend
-Ссылка на pull: https://github.com/Lizaakishina/movies-explorer-frontend/pull/4
+# Movies Explorer
+# Дипломная работа: "Movies Explorer". Создана в рамках учебы в [Яндекс.Практикум](https://practicum.yandex.ru/) на факультете ["Веб-разработчик"](https://practicum.yandex.ru/web/).
 
-Ссылка на макет: https://disk.yandex.ru/d/LbLRVwp16E35bA
-
-Ссылка на сайт: https://ak1s4.movies-explorer.nomoredomains.club
+## Описание:
 
 Фронтенд для дипломного проекта Movies Explorer на курсе *Веб-разработки Яндекс.Практикума.*
-
 Movies Explorer - сервис, в котором можно найти фильмы по запросу и сохранить их в личном кабинете.
 
-## Стек:
+## Технологии:
+
 - HTML;
 - CSS;
 - JavaScript;
@@ -17,9 +15,10 @@ Movies Explorer - сервис, в котором можно найти филь
 - Node.js;
 
 ## Локальный запуск проекта:
+
 - Для запуска фронтенда выполните из директории frontend команду `npm run start`
 - Для запуска сервера выполните из директории backend команду `npm run dev`
 
-## Автор:
-Елизавета Акишина
-Публичный IP: 84.252.131.87
+## Где посмотреть?
+
+А вот тут: https://ak1s4.movies-explorer.nomoredomains.club
